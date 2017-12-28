@@ -12,13 +12,19 @@
 /tmp/*
 !/log/.keep
 !/tmp/.keep
-
 /node_modules
 /yarn-error.log
-
 .byebug_history
 
 # Ignore IDE
 *.sw?
 /nbproject/
+
+# Vagraent
+.vagrant
+
+# App
+Gemfile.lock
+public/assets/**
+
 

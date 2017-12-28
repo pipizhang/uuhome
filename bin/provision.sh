@@ -19,9 +19,6 @@ sudo apt-get install -y build-essential \
                         nodejs \
                         opencc
 
-# Memcached
-sudo apt-get install -y memcached
-
 # Nginx
 sudo apt-get install -y nginx
 
