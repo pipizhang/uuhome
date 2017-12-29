@@ -24,7 +24,6 @@
 .vagrant
 
 # App
-Gemfile.lock
 public/assets/**
 
 
