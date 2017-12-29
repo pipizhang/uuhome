@@ -1,6 +1,6 @@
 SHELL := /bin/bash
 
-.PHONY: help install precompile puma-start puma-stop
+.PHONY: help install precompile test puma-start puma-stop
 
 help: ## This help message
 	@echo "usage: make [target]"
@@ -11,6 +11,9 @@ install: ## Install gems
 
 precompile: ## Execute 'rake assets-precompile' command
 	exec bundle exec rake assets:precompile
+
+test: ## Run tests
+	@exec rspec spec
 
 puma-start: ## Start puma server
 
