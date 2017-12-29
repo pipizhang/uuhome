@@ -25,6 +25,8 @@ sudo apt-get install -y nginx
 # PostgreSQL
 sudo apt-get install -y postgresql
 sudo -u postgres createdb --locale en_US.utf8 --encoding UTF8 --template template0 $APP_DATABASE
+sudo -u postgres createdb --locale en_US.utf8 --encoding UTF8 --template template0 "${APP_DATABASE}_dev"
+sudo -u postgres createdb --locale en_US.utf8 --encoding UTF8 --template template0 "${APP_DATABASE}_test"
 echo "ALTER USER postgres WITH PASSWORD '$APP_DBPASSWD';" | sudo -u postgres psql
 
 # Ruby

@@ -20,10 +20,14 @@ default: &default
   # For details on connection pooling, see Rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
+  host: localhost
+  username: postgres
+  password: banana
 
 development:
   <<: *default
-  database: uuhome_development
+  database: uuhome_dev
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -80,6 +84,6 @@ test:
 #
 production:
   <<: *default
-  database: uuhome_production
+  database: uuhome
   username: uuhome
   password: <%= ENV['UUHOME_DATABASE_PASSWORD'] %>
